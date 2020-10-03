@@ -5,6 +5,7 @@ MAINTAINER Lucas Manchine <lucasperinm@gmail.com>
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
       default-jdk \
       ssh \
+      openssh-server \
       pdsh \
       net-tools \
       curl \
@@ -12,6 +13,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
       gnupg \
       libsnappy-dev \
     && rm -rf /var/lib/apt/lists/*
+
+RUN service ssh start
 
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 
@@ -38,5 +41,8 @@ ENV HADOOP_CONF_DIR=/etc/hadoop
 ENV MULTIHOMED_NETWORK=1
 ENV USER=root
 ENV PATH $HADOOP_HOME/bin/:$PATH
+
+COPY ./core-site.xml $HADOOP_HOME/$HADOOP_CONF_DIR/
+COPY ./hdfs-site.xml $HADOOP_HOME/$HADOOP_CONF_DIR/
 
 ENTRYPOINT /bin/bash
