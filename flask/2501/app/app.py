@@ -29,7 +29,7 @@ def esp(n1,n2,n3):
         tabela.write("n1,n2,n3\n")
     tabela.write(n1+','+n2+','+n3+'\n')
     tabela.close()
-    return n1
+    return ""
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
