@@ -57,8 +57,10 @@ ENV YARN_NODEMANAGER_USER="root"
 
 RUN $HADOOP_HOME/bin/hdfs namenode -format
 
+# Fix JAVA_HOME env variable
 COPY ./hadoop-env.sh $HADOOP_HOME/$HADOOP_CONF_DIR/
-COPY ./hadoop-functions.sh $HADOOP_HOME/libexec/
+
+#COPY ./hadoop-functions.sh $HADOOP_HOME/libexec/
 #RUN $HADOOP_HOME/sbin/start-dfs.sh
 
 ENTRYPOINT /bin/bash
