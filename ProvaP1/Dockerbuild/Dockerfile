@@ -6,7 +6,6 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
       default-jdk \
       ssh \
       openssh-server \
-      pdsh \
       net-tools \
       curl \
       netcat \
@@ -14,7 +13,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
       libsnappy-dev \
     && rm -rf /var/lib/apt/lists/*
 
-RUN service ssh start
+RUN /etc/init.d/ssh start
 
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 
@@ -47,7 +46,7 @@ COPY ./hdfs-site.xml $HADOOP_HOME/$HADOOP_CONF_DIR/
 
 RUN ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa \
     && cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys \
-    && chmod 0600 ~/.ssh/authorized_keys
+    && chmod -R 0600 ~/.ssh/
 
 ENV HDFS_NAMENODE_USER="root"
 ENV HDFS_DATANODE_USER="root"
@@ -55,12 +54,20 @@ ENV HDFS_SECONDARYNAMENODE_USER="root"
 ENV YARN_RESOURCEMANAGER_USER="root"
 ENV YARN_NODEMANAGER_USER="root"
 
+# remover instalacao inves do remove
 RUN $HADOOP_HOME/bin/hdfs namenode -format
 
 # Fix JAVA_HOME env variable
 COPY ./hadoop-env.sh $HADOOP_HOME/$HADOOP_CONF_DIR/
 
-#COPY ./hadoop-functions.sh $HADOOP_HOME/libexec/
-#RUN $HADOOP_HOME/sbin/start-dfs.sh
+# Fix for start-dfs
+COPY ./hadoop-functions.sh $HADOOP_HOME/libexec/
 
-ENTRYPOINT /bin/bash
+# Config parameters for yarn
+COPY ./mapred-site.xml $HADOOP_HOME/$HADOOP_CONF_DIR/
+COPY ./yarn-site.xml $HADOOP_HOME/$HADOOP_CONF_DIR/
+
+EXPOSE 9870 8088
+
+COPY entrypoint.sh /
+ENTRYPOINT /entrypoint.sh

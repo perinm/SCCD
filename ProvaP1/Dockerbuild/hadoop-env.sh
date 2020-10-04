@@ -160,6 +160,8 @@ export HADOOP_OS_TYPE=${HADOOP_OS_TYPE:-$(uname -s)}
 # start/stop daemons" scripts is executed
 # export HADOOP_SSH_OPTS="-o BatchMode=yes -o StrictHostKeyChecking=no -o ConnectTimeout=10s"
 
+export HADOOP_SSH_OPTS="-p 22"
+
 # The built-in ssh handler will limit itself to 10 simultaneous connections.
 # For pdsh users, this sets the fanout size ( -f )
 # Change this to increase/decrease as necessary.
