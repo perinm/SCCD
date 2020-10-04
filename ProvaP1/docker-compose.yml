@@ -2,5 +2,9 @@ version: '3'
 services:
   namenode:
     image: hadoop
+    expose:
+      - "9000"
+    ports:
+      - "9870:9870"
     build: ./Dockerbuild/
     tty: true        # docker run -t

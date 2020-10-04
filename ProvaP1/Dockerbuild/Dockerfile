@@ -45,4 +45,20 @@ ENV PATH $HADOOP_HOME/bin/:$PATH
 COPY ./core-site.xml $HADOOP_HOME/$HADOOP_CONF_DIR/
 COPY ./hdfs-site.xml $HADOOP_HOME/$HADOOP_CONF_DIR/
 
+RUN ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa \
+    && cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys \
+    && chmod 0600 ~/.ssh/authorized_keys
+
+ENV HDFS_NAMENODE_USER="root"
+ENV HDFS_DATANODE_USER="root"
+ENV HDFS_SECONDARYNAMENODE_USER="root"
+ENV YARN_RESOURCEMANAGER_USER="root"
+ENV YARN_NODEMANAGER_USER="root"
+
+RUN $HADOOP_HOME/bin/hdfs namenode -format
+
+COPY ./hadoop-env.sh $HADOOP_HOME/$HADOOP_CONF_DIR/
+COPY ./hadoop-functions.sh $HADOOP_HOME/libexec/
+#RUN $HADOOP_HOME/sbin/start-dfs.sh
+
 ENTRYPOINT /bin/bash
