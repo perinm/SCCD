@@ -43,6 +43,8 @@ ENV PATH $HADOOP_HOME/bin/:$PATH
 
 COPY ./core-site.xml $HADOOP_HOME/$HADOOP_CONF_DIR/
 COPY ./hdfs-site.xml $HADOOP_HOME/$HADOOP_CONF_DIR/
+# un-comment to disable verify unknown hosts
+#COPY ./ssh_config /etc/ssh/
 
 RUN ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa \
     && cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys \
@@ -69,5 +71,6 @@ COPY ./yarn-site.xml $HADOOP_HOME/$HADOOP_CONF_DIR/
 
 EXPOSE 9870 8088
 
+# COPY known_hosts /root/.ssh/
 COPY entrypoint.sh /
 ENTRYPOINT /entrypoint.sh
