@@ -4,4 +4,4 @@ COPY requirements.txt /tmp
 RUN mkdir /code && pip install -r /tmp/requirements.txt
 
 WORKDIR /code
-CMD nohup python app.py
+CMD python app.py
