@@ -27,7 +27,7 @@ def esp(n1,n2=0,n3=0):
         append_write = 'w' # make a new if not
     tabela = open(filename,append_write)
     if append_write == 'w':
-        tabela.write("ip,date,time,n1\n")#,n2,n3\n")
+        tabela.write("ip,date,time,T (ºC)\n")#,n2,n3\n")
     lista=[str(request.remote_addr),
             datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),
             n1
