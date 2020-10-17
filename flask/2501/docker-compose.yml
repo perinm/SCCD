@@ -5,6 +5,7 @@ services:
         image: myflask
         ports:
             - "5000:5000"
+            - "3000:3000"
             - "8502:8501"
         volumes:
             - ./app:/code
