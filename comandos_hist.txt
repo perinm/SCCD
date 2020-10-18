@@ -1,0 +1,1000 @@
+  395  nano instala.sh 
+  396  nano desinstala.sh
+  397  man test
+  398  fg
+  399  sudo ./desinstala.sh 
+  400  man test
+  401  nano desinstala.sh
+  402  sudo ./desinstala.sh 
+  403  man test
+  404  nano desinstala.sh
+  405  sudo ./desinstala.sh 
+  406  nano desinstala.sh
+  407  sudo ./desinstala.sh 
+  408  nano desinstala.sh
+  409  sudo ./instala.sh 
+  410  sudo ./desinstala.sh 
+  411  ls /tmp/ -l
+  412  ls /tmp/ -la
+  413  sudo ./instala.sh 
+  414  sudo ./desinstala.sh bkup_final.tar.gz
+  415  nano desinstala.sh 
+  416  sudo ./desinstala.sh bkup_final.tar.gz outro
+  417  echo $?
+  418  ls
+  419  sudo instala.sh
+  420  sudo ./instala.sh
+  421  sudo apt install hollywood
+  422  hollywood
+  423  cd /var/www/html/
+  424  ls
+  425  nano index.html
+  426  sudo apt install git
+  427  nano index.html
+  428  cd
+  429  ls
+  430  git clone https://github.com/perinm/CIA026-novosite.git
+  431  lsb_release -a
+  432  ls
+  433  cd CIA026-novosite/
+  434  ls
+  435  ls -l
+  436  cat rea
+  437  cat README.md 
+  438  nano README.md 
+  439  git status
+  440  git commit -a
+  441  git status
+  442  git push
+  443  nano README.md 
+  444  git commit -a
+  445  ls
+  446  sudo ./desinstala.sh 
+  447  ls
+  448  cd CIA026-novosite/
+  449  ls
+  450  cd ..
+  451  cd Python/
+  452  ls
+  453  cat script.py 
+  454  cd ;;
+  455  cd ..
+  456  echo "# SCCD" >> README.md
+  457  git init
+  458  git status
+  459  git add instala.sh 
+  460  git add desinstala.sh 
+  461  git add README.md 
+  462  git commit
+  463  git remote add origin https://github.com/perinm/SCCD.git
+  464  git branch -M master
+  465  git status
+  466  git push -u origin master
+  467  sudo apt-get remove docker docker-engine docker.io containerd runc
+  468  sudo apt-get update
+  469  sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common
+  470  curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+  471  sudo apt-key fingerprint 0EBFCD88
+  472  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/debian \
+  473     $(lsb_release -cs) \
+  474     stable"
+  475  sudo apt-get update
+  476  sudo apt-get install docker-ce docker-ce-cli containerd.io
+  477  sudo docker run hello-world
+  478  docker run -it ubuntu bash
+  479  docker run --help
+  480  man cp
+  481  sudo docker ps
+  482  docker ps -a
+  483  sudo docker ps -a
+  484  sudo rocker rm hello-world
+  485  sudo docker rm hello-world
+  486  sudo docker rm vigilant-easley
+  487  sudo docker rm vigilant_easley
+  488  sudo docker images
+  489  sudo docker rmi hello-world
+  490  sudo docker run -it debian
+  491  sudo docker ps
+  492  sudo docker attach a596b57101a7
+  493  mkdir DockerBuild
+  494  cd DockerBuild/
+  495  ls
+  496  nano Dockerfile
+  497  ls -l
+  498  sudo docker images
+  499  sudo docker build -t lucas .
+  500  nano Dockerfile 
+  501  sudo docker images
+  502  sudo docker build -t lucas .
+  503  sudo docker images
+  504  sudo docker ps
+  505  sudo docker run -it --name localucas lucas
+  506  sudo docker ps
+  507  sudo docker stop localucas
+  508  sudo docker ps -a
+  509  sudo docker attach localucas
+  510  sudo docker attach lucas
+  511  nano Dockerfile 
+  512  sudo docker build -t lucas .
+  513  sudo docker ps
+  514  sudo docker ps -a
+  515  sudo docker rm localucas
+  516  sudo docker run -it lucas
+  517  sudo nano /etc/hosts
+  518  sudo docker run -it lucas
+  519  sudo docker ps
+  520  sudo docker run -it --name localucas lucas
+  521  sudo docker ps
+  522  nano Dockerfile 
+  523  nano start.sh
+  524  sudo docker rm localucas
+  525  sudo docker -it --name localucas lucas
+  526  sudo docker exec -it --name localucas lucas /bin/bash
+  527  sudo docker run -it --name localucas --entrypoint /bin/bash lucas
+  528  nano start.sh
+  529  ls -l
+  530  nano Dockerfile 
+  531  chmod +x start.sh
+  532  nano Dockerfile 
+  533  sudo docker build -t lucas
+  534  sudo docker build -t lucas .
+  535  sudo docker run -it --name localucas lucas
+  536  sudo docker rm localucas
+  537  sudo docker run -it --name localucas lucas
+  538  sudo docker ps
+  539  sudo docker stop localucas
+  540  sudo docker rm localucas
+  541  sudo docker run -it --name localucas -p 80:80 lucas
+  542  sudo docker ps
+  543  cd ..
+  544  git add ./DockerBuild/*
+  545  git status
+  546  git commit
+  547  git push
+  548  cd ./DockerBuild/
+  549  sudo docker run -it --name teste-flask debian
+  550  cd ..
+  551  cd DockerBuild/
+  552  ls
+  553  mkdir aula1
+  554  ls -a
+  555  mv Dockerfile ./aula1/
+  556  ls aula1/
+  557  mv start.sh ./aula1/
+  558  mkdir ex1
+  559  cd ex1
+  560  cd ..
+  561  git status
+  562  git add ./DockerBuild/*
+  563  git status
+  564  cd DockerBuild/ex1/
+  565  ls
+  566  nano Dock
+  567  ls
+  568  nano Dockerfile
+  569  nano app.py
+  570  sudo docker ps
+  571  sudo docker build -t lucas-flask .
+  572  sudo docker run -it --name lflask lucas-flask
+  573  nano Dockerfile 
+  574  sudo docker run -it --name lflask lucas-flask
+  575  sudo docker rm lflask
+  576  sudo docker build -t lucas-flask .
+  577  sudo docker run -it --name lflask lucas-flask
+  578  sudo docker run -it --name lflask -p 5000:80 lucas-flask
+  579  sudo docker rm lflask
+  580  sudo docker run -it --name lflask -p 5000:80 lucas-flask
+  581  sudo docker rm lflask
+  582  sudo docker run -it --name lflask -p 80:5000 lucas-flask
+  583  sudo docker rm lflask
+  584  nano Dockerfile 
+  585  sudo docker run -it --name lflask -p 5000:80 lucas-flask
+  586  sudo docker rm lflask
+  587  sudo docker build -t lucas-flask .
+  588  sudo docker run -it --name lflask -p 5000:80 lucas-flask
+  589  docker ps
+  590  sudo docker ps
+  591  nano app.py 
+  592  sudo docker rm lflask
+  593  sudo docker stop lflask
+  594  sudo docker run -it --name lflask -p 5000:5000 lucas-flask
+  595  sudo docker rm lflask
+  596  sudo docker run -it --name lflask -p 5000:5000 lucas-flask
+  597  cd ..
+  598  git add ./DockerBuild/*
+  599  git commit
+  600  git push
+  601  sudo docker system prune
+  602  sudo docker images
+  603  git status
+  604  ls
+  605  cd flask/
+  606  git checkout -b adicionando_hora
+  607  nano ./app/app.py 
+  608  git checkout -b adicionando_hora
+  609  sudo su
+  610  pip
+  611  pip3
+  612  sudo su
+  613  ld
+  614  ls
+  615  cd streamlit/desafio-take/
+  616  streamlit run vis-interactions.py 
+  617  pip install --upgrade streamlit
+  618  pip3 install --upgrade streamlit
+  619  streamlit run vis-interactions.py 
+  620  pip uninstall - streamlit
+  621  pip uninstall streamlit
+  622  sudo pip uninstall streamlit
+  623  streamlit
+  624  pip install --upgrade streamlit
+  625  sudo pip uninstall streamlit
+  626  pip uninstall streamlit
+  627  pip3 install streamlit
+  628  pip3 uninstall streamlit
+  629  pip3 install streamlit
+  630  streamlit
+  631  nano ~/.bashrc
+  632  fg
+  633  source ~/.bashrc
+  634  streamlit hello
+  635  stremalit
+  636  streamlit
+  637  fg
+  638  nano ~/.bashrc
+  639  cd ~
+  640  ls
+  641  cd ..
+  642  ls
+  643  cd bin/
+  644  ls
+  645  cd
+  646  nano ~/.bashrc
+  647  echo $PATH
+  648  nano ~/.bashrc
+  649  source ~/.bashrc
+  650  echo $PATH
+  651  streamlit hello
+  652  cd streamlit/desafio-take/
+  653  ls
+  654  streamlit run vis-interactions.py 
+  655  pip3 install unidecode
+  656  streamlit run vis-interactions.py 
+  657  cd streamlit/desafio-take/
+  658  streamlit run vis-interactions.py &
+  659  nohup
+  660  nohup streamlit/desafio-take/streamlit run vi
+  661  nohup streamlit run streamlit/desafio-take/vis-interactions.py 
+  662  ps aux
+  663  kill 11712
+  664  ps aux
+  665  cd streamlit/desafio-take/
+  666  nohup streamlit run vis-interactions.py 
+  667  cd streamlit/desafio-take/
+  668  git pull
+  669  sudo git pull
+  670  ls
+  671  cd streamlit/
+  672  cd desafio-take/
+  673  git pull
+  674  sudo git pull
+  675  sudo su
+  676  ls
+  677  mkdir ProvaP1
+  678  cd ProvaP1/
+  679  ls
+  680  sudo docker pull library/openjdk:8
+  681  sudo apt-get install ssh
+  682  sudo apt-get install pdsh
+  683  wget -P http://ftp.unicamp.br/pub/apache/hadoop/common/hadoop-3.3.0/hadoop-3.3.0.tar.gz
+  684  wget -P "http://ftp.unicamp.br/pub/apache/hadoop/common/hadoop-3.3.0/hadoop-3.3.0.tar.gz"
+  685  wget -P . "http://ftp.unicamp.br/pub/apache/hadoop/common/hadoop-3.3.0/hadoop-3.3.0.tar.gz"
+  686  mkdir Dockerbuild
+  687  cd Dockerbuild/
+  688  nano Dockerfile
+  689  ls
+  690  cd ..
+  691  mkdir hadoop_docker
+  692  cd hadoop_docker/
+  693  git clone https://github.com/m-semnani/bd-infra.git
+  694  cd bd-infra/
+  695  docker-compose up -d
+  696  docker-machine –version
+  697  docker-compose up -d
+  698  docker ps
+  699  sudo su
+  700  cd ..
+  701  git add ProvaP1/.
+  702  git status
+  703  git rm ProvaP1/hadoop-3.3.0.tar.gz 
+  704  git status
+  705  ls
+  706  cd ProvaP1/
+  707  ls
+  708  cd Dockerbuild/
+  709  ls
+  710  nano Dockerfile
+  711  cd ..
+  712  ls
+  713  cd hadoop_docker/
+  714  ls
+  715  cdc bd-infra/
+  716  ls
+  717  cd bd-infra/
+  718  ls
+  719  cd bank/
+  720  ls
+  721  cd ..
+  722  ls
+  723  nano docker-compose.yml 
+  724  cd ProvaP1/
+  725  la
+  726  ls
+  727  cd Dockerbuild/
+  728  ls
+  729  cd Do
+  730  nano Dockerfile 
+  731  ls
+  732  cd ..
+  733  ls
+  734  cd Dockerbuild/
+  735  ls
+  736  nano
+  737  nano Dockerfile 
+  738  sudo apt install vim
+  739  vim Dockerfile 
+  740  sudo docker-compose up
+  741  sudo docker-compose build provap1_namenode_1 /bin/bash
+  742  sudo docker-compose build provap1 /bin/bash
+  743  sudo docker-compose build hadoop /bin/bash
+  744  sudo docker-compose run
+  745  nano Dockerbuild/Dockerfile 
+  746  sudo docker-compose run
+  747  sudo docker-compose up
+  748  sudo docker-compose build
+  749  nano docker-compose.yml 
+  750  sudo docker-compose build
+  751  sudo docker-compose down
+  752  sudo docker-compose up
+  753  sudo docker-compose down
+  754  nano docker-compose.yml 
+  755  sudo docker-compose up
+  756  nano Dockerbuild/Dockerfile 
+  757  sudo docker-compose up
+  758  cd ProvaP1/Dockerbuild/
+  759  ls
+  760  vim Dockerfile 
+  761  cd ..
+  762  git status
+  763  git reset HEAD hadoop-3.3.0.tar.gz hadoop_docker/bd-infra/
+  764  nano .gitignore
+  765  git status
+  766  ls
+  767  cp hadoop-3.3.0.tar.gz hadoop-3.3.0-teste.tar.gz 
+  768  ls
+  769  git status
+  770  cd ..
+  771  git status
+  772  cd ProvaP1/
+  773  git add Dockerbuild/.
+  774  git add Dockerbase/.
+  775  sudo git add Dockerbase/.
+  776  git status
+  777  git commit
+  778  sudo chown -R lucas. ..
+  779  git commit
+  780  fg
+  781  gitp ush
+  782  git push
+  783  nano Dockerbuild/Dockerfile 
+  784  cd Dockerbuild/
+  785  sudo docker-compose build
+  786  cd ProvaP1/
+  787  sudo docker-compose build
+  788  sudo docker-compose ps
+  789  sudo docker-compose up
+  790  nano Dockerbuild/Dockerfile 
+  791  sudo docker-compose down
+  792  sudo docker-compose ps
+  793  sudo docker-compose up -b
+  794  sudo docker-compose build
+  795  sudo docker-compose up
+  796  sudo docker-compose ps
+  797  sudo docker exec -it provap1_namenode_1 /bin/bash
+  798  nano Dockerbuild/Dockerfile 
+  799  sudo docker-compose build
+  800  sudo docker-compose up
+  801  sudo docker-compose up -d
+  802  sudo docker exec -it provap1_namenode_1 /bin/bash
+  803  nano Dockerbuild/Dockerfile 
+  804  sudo docker-compose build
+  805  nano Dockerbuild/Dockerfile 
+  806  sudo docker-compose build
+  807  nano Dockerbuild/Dockerfile 
+  808  sudo docker-compose build
+  809  nano Dockerbuild/Dockerfile 
+  810  sudo docker-compose build
+  811  nano Dockerbuild/Dockerfile 
+  812  sudo docker-compose build
+  813  nano Dockerbuild/Dockerfile 
+  814  sudo docker-compose build
+  815  nano Dockerbuild/Dockerfile 
+  816  sudo docker-compose build
+  817  nano Dockerbuild/Dockerfile 
+  818  sudo docker-compose build
+  819  sudo docker-compose up -d
+  820  sudo docker exec -it provap1_namenode_1 /bin/bash
+  821  git commit -a
+  822  git push
+  823  nano Dockerbuild/Dockerfile 
+  824  sudo docker-compose up -d
+  825  sudo docker exec -it provap1_namenode_1 /bin/bash
+  826  sudo docker-compose ps
+  827  cd ProvaP1/
+  828  sudo docker-compose ps
+  829  sudo docker -it exec provap1_namenode_1 /bin/bash
+  830  sudo docker exec -it provap1_namenode_1 /bin/bash
+  831  nano Dockerbuild/Dockerfile
+  832  sudo docker cp provap1_namenode_1:/opt/hadoop_3.3.0/etc/hadoop/core-site.xml .
+  833  sudo docker cp provap1_namenode_1:/opt/hadoop-3.3.0/etc/hadoop/core-site.xml .
+  834  ls
+  835  cat core-site.xml 
+  836  mv core-site.xml ./Dockerbuild/
+  837  rm -r Dockerbase/
+  838  nano Dockerbuild/core-site.xml 
+  839  sudo chown -R lucas. .
+  840  nano Dockerbuild/core-site.xml 
+  841  nano Dockerbuild/Dockerfile 
+  842  sudo docker-compose build
+  843  sudo docker-compose up -d
+  844  sudo docker-compose down
+  845  sudo docker-compose up -d -b
+  846  sudo docker-compose up -d --build
+  847  sudo docker exec -it provap1_namenode_1 /bin/bash
+  848  sudo docker cp provap1_namenode_1:/opt/hadoop-3.3.0/etc/hadoop/hdfs-site.xml ./Dockerbuild/
+  849  sudo chown -R lucas. .
+  850  nano Dockerbuild/Dockerfile 
+  851  nano ./Dockerbuild/hdfs-site.xml 
+  852  sudo docker-compose up -d --build
+  853  sudo docker exec -it provap1_namenode_1 /bin/bash
+  854  nano Dockerbuild/Dockerfile 
+  855  sudo docker-compose up -d --build
+  856  git add docker-compose.yml 
+  857  git status
+  858  git commit -a
+  859  git push
+  860  nano Dockerbuild/Dockerfile 
+  861  sudo docker-compose up -d --build
+  862  sudo docker exec -it provap1_namenode_1 /bin/bash
+  863  nano Dockerbuild/Dockerfile 
+  864  fg
+  865  sudo docker exec -it provap1_namenode_1 /bin/bash
+  866  sudo docker-compose up -d --build
+  867  nano Dockerbuild/Dockerfile 
+  868  fg
+  869  sudo docker-compose up -d --build
+  870  nano Dockerbuild/Dockerfile 
+  871  sudo docker-compose up -d --build
+  872  sudo docker exec -it provap1_namenode_1 /bin/bash
+  873  sudo docker cp provap1_namenode_1:/opt/hadoop-3.3.0/etc/hadoop/hadoop-env.sh ./Dockerbuild/
+  874  nano ./Dockerbuild/
+  875  nano ./Dockerbuild/hadoop-env.sh 
+  876  sudo nano ./Dockerbuild/hadoop-env.sh 
+  877  nano Dockerbuild/Dockerfile 
+  878  fg
+  879  nano Dockerbuild/Dockerfile 
+  880  sudo docker-compose up -d --build
+  881  sudo docker exec -it provap1_namenode_1 /bin/bash
+  882  sudo docker exec -it provap1_namenode_1 -p 9870 /bin/bash
+  883  sudo docker exec -it provap1_namenode_1 /bin/bash -p 9870
+  884  sudo docker exec -p 9870 -it provap1_namenode_1 /bin/bash
+  885  nano docker-compose.yml 
+  886  sudo docker-compose up -d --build
+  887  nano docker-compose.yml 
+  888  sudo docker-compose up -d --build
+  889  sudo docker-compose ps
+  890  sudo docker exec -it provap1_namenode_1 /bin/bash
+  891  nano docker-compose.yml 
+  892  sudo docker exec -it provap1_namenode_1 /bin/bash
+  893  sudo docker-compose up -d --build
+  894  sudo docker-compose ps
+  895  sudo docker exec -it provap1_namenode_1 /bin/bash
+  896  nano docker-compose.yml 
+  897  sudo docker-compose up -d --build
+  898  sudo docker exec -it provap1_namenode_1 /bin/bash
+  899  nano docker-compose.yml 
+  900  sudo docker-compose up -d --build
+  901  sudo docker exec -it provap1_namenode_1 /bin/bash
+  902  nano docker-compose.yml 
+  903  nano Dockerbuild/Dockerfile 
+  904  sudo docker-compose up -d --build
+  905  sudo docker exec -it provap1_namenode_1 /bin/bash
+  906  sudo docker cp provap1_namenode_1:/opt/hadoop-3.3.0/libexec/hadoop-functions.sh ./Dockerbuild/
+  907  nano ./Dockerbuild/hadoop-functions.sh 
+  908  vim ./Dockerbuild/hadoop-functions.sh 
+  909  sudo vim ./Dockerbuild/hadoop-functions.sh 
+  910  sudo chown -R lucas. .
+  911  nano Dockerbuild/Dockerfile 
+  912  sudo vim ./Dockerbuild/hadoop-functions.sh 
+  913  sudo docker-compose up -d --build
+  914  sudo docker cp provap1_namenode_1:/opt/hadoop-3.3.0/libexec/hadoop-functions.sh ./Dockerbuild/
+  915  sudo docker exec -it provap1_namenode_1 /bin/bash
+  916  git commit -a
+  917  git push
+  918  sudo docker exec -it provap1_namenode_1 /bin/bash
+  919  cd ProvaP1/
+  920  sudo docker-compose down
+  921  sudo docker-compose up -d --build
+  922  sudo docker exec -it provap1_namenode_1 /bin/bash
+  923  nano Dockerbuild/Dockerfile 
+  924  sudo docker-compose up -d --build
+  925  sudo docker exec -it provap1_namenode_1 /bin/bash
+  926  ls
+  927  git add Dockerbuild/
+  928  git status
+  929  git commit
+  930  perinm
+  931  git push
+  932  sudo docker-compose up -d --build
+  933  cd ProvaP1/
+  934  sudo docker-compose up -d --build
+  935  ls
+  936  sudo docker exec -it provap1_namenode_1 /bin/bash
+  937  nano Dockerbuild/Dockerfile 
+  938  sudo docker-compose up -d --build
+  939  nano Dockerbuild/Dockerfile 
+  940  sudo docker exec -it provap1_namenode_1 /bin/bash
+  941  nano Dockerbuild/Dockerfile 
+  942  nano Dockerbuild/entrypoint.sh
+  943  sudo docker-compose up -d --build
+  944  nano Dockerbuild/entrypoint.sh
+  945  nano Dockerbuild/Dockerfile 
+  946  nano Dockerbuild/entrypoint.sh
+  947  chmod +x Dockerbuild/entrypoint.sh
+  948  sudo docker-compose up -d --build
+  949  sudo docker exec -it provap1_namenode_1 /bin/bash
+  950  nano docker-compose.yml 
+  951  sudo docker-compose up -d --build
+  952  sudo docker exec -it provap1_namenode_1 /bin/bash
+  953  ls Dockerbuild/
+  954  nano Dockerbuild/hdfs-site.xml 
+  955  nano Dockerbuild/core-site.xml 
+  956  sudo docker-compose up -d --build
+  957  nano Dockerbuild/core-site.xml 
+  958  sudo docker-compose up -d --build
+  959  ls
+  960  nano Dockerbuild/mapred-ste.xml
+  961  nano Dockerbuild/yarn-site.xml
+  962  mv Dockerbuild/mapred-ste.xml Dockerbuild/mapred-site.xml
+  963  nano Dockerbuild/Dockerfile 
+  964  nano Dockerbuild/entrypoint.sh 
+  965  sudo docker-compose up -d --build
+  966  nano docker-compose.yml 
+  967  nano Dockerbuild/Dockerfile 
+  968  sudo docker-compose up -d --build
+  969  sudo docker exec -it provap1_namenode_1 /bin/bash
+  970  git add Dockerbuild/
+  971  git commit -a
+  972  nano Dockerbuild/Dockerfile 
+  973  git commit -a
+  974  git push
+  975  sudo docker ps
+  976  sudo docker stop c9c64d021e2e
+  977  vim flask/2501/app/app.py 
+  978  cv flask/2501/
+  979  cd flask/2501/
+  980  ls
+  981  sudo docker-compose up
+  982  vim app/app.py 
+  983  sudo docker-compose up
+  984  sudo docker-compose up -d --build
+  985  sudo docker-compose up --build
+  986  cd flask/2501/
+  987  ls
+  988  sudo docker-compose ps
+  989  sudo docker-compose down
+  990  nano app/app.py 
+  991  sudo docker-compose up
+  992  nano app/app.py 
+  993  sudo docker-compose up
+  994  nano app/app.py 
+  995  sudo docker-compose up
+  996  sudo docker-compose up --build
+  997  nano app/app.py 
+  998  sudo docker-compose up --build
+  999  nano app/app.py 
+ 1000  sudo docker-compose up --build
+ 1001  nano app/app.py 
+ 1002  sudo docker-compose up --build
+ 1003  nano app/app.py 
+ 1004  sudo docker-compose up --build
+ 1005  sudo docker-compose up
+ 1006  cd flask/2501/
+ 1007  sudo docker-compose up
+ 1008  nano app/app.py 
+ 1009  nano Dockerbuild/requirements.txt 
+ 1010  sudo docker-compose up
+ 1011  sudo docker-compose up --build
+ 1012  ls
+ 1013  cd flask/
+ 1014  ls
+ 1015  cd 2501/
+ 1016  ls
+ 1017  nano app/app.py 
+ 1018  sudo docker-compose up --build
+ 1019  nano app/app.py 
+ 1020  nano Dockerbuild/Dockerfile 
+ 1021  sudo docker-compose up --build
+ 1022  nano Dockerbuild/Dockerfile 
+ 1023  sudo docker-compose up --build
+ 1024  nano Dockerbuild/Dockerfile 
+ 1025  sudo docker-compose up --build
+ 1026  nano Dockerbuild/Dockerfile 
+ 1027  sudo docker-compose up --build
+ 1028  sudo docker exec -it provap1_namenode_1 /bin/bash
+ 1029  sudo docker ps
+ 1030  sudo docker-compose up -d --build
+ 1031  sudo docker ps
+ 1032  nano Dockerbuild/Dockerfile 
+ 1033  sudo docker-compose up -d --build
+ 1034  sudo docker ps
+ 1035  sudo docker exec -it myflask /bin/bash
+ 1036  sudo docker exec -it 2501_web_1 /bin/bash
+ 1037  nano Dockerbuild/Dockerfile 
+ 1038  nano app/app.py 
+ 1039  sudo docker-compose up -d --build
+ 1040  sudo docker exec -it 2501_web_1 /bin/bash
+ 1041  nano app/app.py 
+ 1042  sudo docker-compose up -d --build
+ 1043  sudo docker exec -it 2501_web_1 /bin/bash
+ 1044  nano app/app.py 
+ 1045  sudo docker-compose up -d --build
+ 1046  sudo docker ps
+ 1047  sudo docker exec -it 2501_web_1 /bin/bash
+ 1048  nano app/app.py 
+ 1049  ls app/
+ 1050  ls
+ 1051  cd ..
+ 1052  git add flask/
+ 1053  git status
+ 1054  git commit
+ 1055  git push
+ 1056  nano app/app.py 
+ 1057  cd flask/app
+ 1058  ls
+ 1059  cd flask/2501/app
+ 1060  ls
+ 1061  cd ..
+ 1062  nano app/app.py 
+ 1063  sudo docker-compose up -d --build
+ 1064  sudo docker exec -it 2501_web_1 /bin/bash
+ 1065  git status
+ 1066  git commit -a
+ 1067  git push
+ 1068  git log --oneline
+ 1069  git log --pretty
+ 1070  git log --graph --pretty
+ 1071  git log --graph --pretty --abbrev-commit
+ 1072  git log
+ 1073  git rebase -i 3ef8fbfff637bc52e3785d5c44dcb86adf077d56
+ 1074  git log
+ 1075  git pull
+ 1076  git status
+ 1077  cd streamlit/
+ 1078  ls
+ 1079  cd ..
+ 1080  cd Python/
+ 1081  ls
+ 1082  cat script.py 
+ 1083  git fetch --all
+ 1084  cd ..
+ 1085  git fetch --all
+ 1086  git reset --hard origin/master
+ 1087  ls
+ 1088  git status
+ 1089  git log
+ 1090  sudo docker ps
+ 1091  cd flask/2501/
+ 1092  ls
+ 1093  sudo docker-compose down
+ 1094  git status
+ 1095  git commit -a
+ 1096  git pull
+ 1097  ls
+ 1098  cd ProvaP1/
+ 1099  ls
+ 1100  sudo docker-compose
+ 1101  sudo docker-compose up --build
+ 1102  sudo docker-compose up -d --build
+ 1103  sudo docker exec -it provap1_namenode_1 /bin/bash
+ 1104  ls
+ 1105  cd Dockerbuild/
+ 1106  ls
+ 1107  nano entrypoint.sh 
+ 1108  sudo docker-compose up -d --build
+ 1109  sudo docker exec -it provap1_namenode_1 /bin/bash
+ 1110  sudo docker cp provap1_namenode_1:/etc/ssh/ssh_config ./Dockerbuild/
+ 1111  cd ..
+ 1112  sudo docker cp provap1_namenode_1:/etc/ssh/ssh_config ./Dockerbuild/
+ 1113  ls
+ 1114  cd Dockerbuild/
+ 1115  cd ..
+ 1116  nano Dockerbuild/ssh_config 
+ 1117  sudo chown -R lucas. .
+ 1118  nano Dockerbuild/ssh_config 
+ 1119  nano Dockerbuild/Dockerfile 
+ 1120  sudo docker exec -it provap1_namenode_1 /bin/bash
+ 1121  cd ProvaP1/
+ 1122  ls
+ 1123  nano Dockerbuild/Dockerfile 
+ 1124  sudo docker-compose up -d --build
+ 1125  sudo docker exec -it provap1_namenode_1 /bin/bash
+ 1126  nano Dockerbuild/ssh_config 
+ 1127  sudo docker-compose up -d --build
+ 1128  sudo docker exec -it provap1_namenode_1 /bin/bash
+ 1129  sudo docker-compose up -d --build
+ 1130  nano Dockerbuild/Dockerfile 
+ 1131  sudo docker-compose up -d --build
+ 1132  sudo docker exec -it provap1_namenode_1 /bin/bash
+ 1133  ls
+ 1134  sudo docker cp provap1_namenode_1:/root/.ssh/known_hosts ./Dockerbuild/
+ 1135  cat Dockerbuild/known_hosts 
+ 1136  nano Dockerbuild/Dockerfile 
+ 1137  sudo docker-compose up -d --build
+ 1138  sudo docker exec -it provap1_namenode_1 /bin/bash
+ 1139  sudo docker cp provap1_namenode_1:/root/.ssh/known_hosts ./Dockerbuild/
+ 1140  sudo docker-compose up -d --build
+ 1141  sudo docker exec -it provap1_namenode_1 /bin/bash
+ 1142  nano Dockerbuild/known_hosts 
+ 1143  sudo docker exec -it provap1_namenode_1 /bin/bash
+ 1144  nano Dockerbuild/entrypoint.sh 
+ 1145  nano Dockerbuild/Dockerfile 
+ 1146  sudo docker-compose up -d --build
+ 1147  sudo docker exec -it provap1_namenode_1 /bin/bash
+ 1148  nano Dockerbuild/entrypoint.sh 
+ 1149  sudo docker-compose up -d --build
+ 1150  sudo docker exec -it provap1_namenode_1 /bin/bash
+ 1151  nano Dockerbuild/entrypoint.sh 
+ 1152  sudo docker exec -it provap1_namenode_1 /bin/bash
+ 1153  sudo docker-compose down
+ 1154  sudo docker-compose up -d --build
+ 1155  sudo docker exec -it provap1_namenode_1 /bin/bash
+ 1156  nano Dockerbuild/entrypoint.sh 
+ 1157  sudo docker-compose up -d --build
+ 1158  sudo docker exec -it provap1_namenode_1 /bin/bash
+ 1159  sudo docker-compose up -d --build
+ 1160  sudo docker exec -it provap1_namenode_1 /bin/bash
+ 1161  cd ProvaP1/
+ 1162  ls
+ 1163  nano Dockerbuild/Dockerfile 
+ 1164  nano Dockerbuild/entrypoint.sh 
+ 1165  sudo docker-compose up -d --build
+ 1166  sudo docker exec -it provap1_namenode_1 /bin/bash
+ 1167  sudo docker-compose down
+ 1168  sudo docker-compose -d --build
+ 1169  sudo docker-compose up -d --build
+ 1170  sudo docker exec -it provap1_namenode_1 /bin/bash
+ 1171  sudo docker-compose logs
+ 1172  nano Dockerbuild/entrypoint.sh 
+ 1173  sudo docker-compose up -d --build
+ 1174  sudo docker-compose logs
+ 1175  sudo docker exec -it provap1_namenode_1 /bin/bash
+ 1176  git status
+ 1177  git coomit -a
+ 1178  git commit -a
+ 1179  git push
+ 1180  ls
+ 1181  cd flask/
+ 1182  ls
+ 1183  cd 2501/
+ 1184  ls
+ 1185  cd grafana/
+ 1186  ls
+ 1187  cd ..
+ 1188  nano docker-compose.yml 
+ 1189  sudo docker-compose up
+ 1190  sudo docker-compose up -d --build
+ 1191  sudo docker exec -it namenode bash
+ 1192  ls
+ 1193  cd hadoop/
+ 1194  ls
+ 1195  sudo docker-compose ps
+ 1196  sudo docker ps
+ 1197  nano docker-compose.yml 
+ 1198  sudo docker-compose --compatibility up -d --build
+ 1199  sudo docker exec -it namenode bash
+ 1200  git status
+ 1201  git branch
+ 1202  git commit -a
+ 1203  git log --oneline
+ 1204  git log --graph --oneline
+ 1205  git push -u origin grafana 
+ 1206  git checkout master
+ 1207  ls
+ 1208  git status
+ 1209  git log
+ 1210  git push
+ 1211  git status
+ 1212  cd streamlit/
+ 1213  ls
+ 1214  cd ..
+ 1215  cd flask/2501/
+ 1216  git status
+ 1217  ls
+ 1218  cd aoo
+ 1219  cd grafana/
+ 1220  ls
+ 1221  cd .
+ 1222  cd ..
+ 1223  cd app/
+ 1224  ls
+ 1225  git status
+ 1226  cd ..
+ 1227  cd app/
+ 1228  ls
+ 1229  cat log-api.txt 
+ 1230  cat nohup.out 
+ 1231  sudo cat nohup.out 
+ 1232  ls
+ 1233  cd 
+ 1234  ls
+ 1235  cd flask/2501/
+ 1236  ls
+ 1237  ls Dockerbuild/
+ 1238  git status
+ 1239  git checkout grafana 
+ 1240  ls
+ 1241  ls Dockerbuild/
+ 1242  ls app/
+ 1243  ls grafana/
+ 1244  git branch
+ 1245  git checkout master
+ 1246  git pull
+ 1247  cat app/texto.csv 
+ 1248  cd app/
+ 1249  ls
+ 1250  vim flask-api.py 
+ 1251  ls
+ 1252  cd ..
+ 1253  ls
+ 1254  cd Dockerbuild/
+ 1255  ls
+ 1256  nano entrypoint.sh 
+ 1257  ls ../app/
+ 1258  nano entrypoint.sh 
+ 1259  sudo docker-compose up -d --build
+ 1260  cd ..
+ 1261  sudo docker-compose up -d --build
+ 1262  ls
+ 1263  mkdir hadoop
+ 1264  cd hadoop/
+ 1265  cd ..
+ 1266  nano .gitignore
+ 1267  git add .gitignore
+ 1268  git status
+ 1269  ls
+ 1270  cd hadoop/
+ 1271  cd ..
+ 1272  cd hadoop/
+ 1273  git clone https://github.com/big-data-europe/docker-hadoop
+ 1274  ld
+ 1275  ls
+ 1276  cd docker-hadoop/
+ 1277  ls
+ 1278  cd ..
+ 1279  rm -r docker-hadoop/
+ 1280  cd ..
+ 1281  rm -r hadoop/
+ 1282  git clone https://github.com/big-data-europe/docker-hadoop hadoop
+ 1283  cd hadoop/
+ 1284  ls
+ 1285  cat docker-compose
+ 1286  cat docker-compose.yml 
+ 1287  nano docker-compose.yml 
+ 1288  nano docker-compose-v3.yml 
+ 1289  nano docker-compose.yml 
+ 1290  free
+ 1291  free -h
+ 1292  man free
+ 1293  man free --mega
+ 1294  free --mega
+ 1295  free -m
+ 1296  nano docker-compose.yml 
+ 1297  vim docker-compose.yml 
+ 1298  sudo docker-compose --compatibility up -d
+ 1299  sudo docker-compose ps
+ 1300  sudo docker ps
+ 1301  sudo docker images
+ 1302  sudo docker image prune
+ 1303  sudo docker images
+ 1304  df
+ 1305  df --mega
+ 1306  man df
+ 1307  df -h
+ 1308  sudo docker-compose ps
+ 1309  cd flask/2501/
+ 1310  ls
+ 1311  sudo docker-compose ps
+ 1312  ls
+ 1313  nano docker-compose.yml 
+ 1314  git status
+ 1315  nano Dockerbuild/Dockerfile
+ 1316  sudo docker-compose up -d --build
+ 1317  sudo docker ps
+ 1318  sudo docker-compose logs
+ 1319  sudo docker logs
+ 1320  sudo docker logs 2501_web_1
+ 1321  free --mega
+ 1322  ls
+ 1323  cd flask/
+ 1324  cd 2501/
+ 1325  ls
+ 1326  got status
+ 1327  git status
+ 1328  git checkout -b grafana_streamlit
+ 1329  git status
+ 1330  cat Dockerbuild/entrypoint.sh 
+ 1331  cat Dockerbuild/Dockerfile
+ 1332  ls
+ 1333  nano Dockerbuild/Dockerfile
+ 1334  nano Dockerbuild/entrypoint.sh 
+ 1335  sudo docker-compose up -d --build
+ 1336  sudo docker-compose ps
+ 1337  cat Dockerbuild/entrypoint.sh 
+ 1338  sudo docker ps
+ 1339  sudo docker system prune -a --volume
+ 1340  sudo docker system prune -a --volumes
+ 1341  sudo docker-compose up -d --build
+ 1342  sudo docker ps
+ 1343  cd
+ 1344  ls
+ 1345  cd hadoop/
+ 1346  ls
+ 1347  sudo docker-compose down
+ 1348  sudo docker ps
+ 1349  cd
+ 1350  cd flask/2501/
+ 1351  ls
+ 1352  ls app/
+ 1353  cat app/nohup.out 
+ 1354  sudo cat app/nohup.out 
+ 1355  ls app/
+ 1356  sudo cat app/log-api.txt 
+ 1357  rm app/bkp_texto.csv 
+ 1358  ls
+ 1359  ls Dockerbuild/
+ 1360  vim Dockerbuild/Dockerfile
+ 1361  vim Dockerbuild/entrypoint.sh 
+ 1362  sudo docker-compose up
+ 1363  sudo docker-compose ps
+ 1364  sudo docker-compose up -d --build
+ 1365  sudo docker-compose up --build
+ 1366  nano Dockerbuild/entrypoint.sh 
+ 1367  sudo docker-compose up --build
+ 1368  nano Dockerbuild/entrypoint.sh 
+ 1369  sudo docker-compose up --build
+ 1370  nano Dockerbuild/entrypoint.sh 
+ 1371  sudo docker-compose up --build
+ 1372  git status
+ 1373  git branch
+ 1374  git checkout -d grafana
+ 1375  git branch -d grafana
+ 1376  git status
+ 1377  git commit -a
+ 1378  git push -u origin grafana_streamlit 
+ 1379  git checkout master
+ 1380  git status
+ 1381  git log --graph
+ 1382  git log --graph --oneline
+ 1383  git branch
+ 1384  git branch -d grafana_streamlit 
+ 1385  git checkout masteer
+ 1386  git checkout master
+ 1387  git pupll
+ 1388  git pull
+ 1389  git log --graph
+ 1390  git push origin --delete grafana
+ 1391  git log --graph
+ 1392  git push origin --delete grafana_streamlit
+ 1393  ls
+ 1394  history >> file.txt
