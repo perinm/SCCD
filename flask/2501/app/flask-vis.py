@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
 
-st.write("Authors:")
-images = ["/root/ryuk.jpg","/root/waru.jpg","/root/peregoso.jpg"]
-st.image(images, width=200, caption=images)
+#st.write("Authors:")
+#images = ["/root/ryuk.jpg","/root/waru.jpg","/root/peregoso.jpg"]
+#st.image(images, width=200, caption=images)
 
 def display_dataframe_quickly(df, max_rows=2000, **st_dataframe_kwargs):
     """Display a subset of a DataFrame or Numpy Array to speed up app renders.
