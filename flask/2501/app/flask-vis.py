@@ -1,9 +1,10 @@
 import streamlit as st
+#import matplotlib.pyplot as plt
 import pandas as pd
 
-st.write("Authors:")
-images = ["/root/ryuk.jpg","/root/waru.jpg","/root/peregoso.jpg"]
-st.image(images, width=200, caption=images)
+#st.write("Authors:")
+#images = ["/root/ryuk.jpg","/root/waru.jpg","/root/peregoso.jpg"]
+#st.image(images, width=200, caption=images)
 
 def display_dataframe_quickly(df, max_rows=2000, **st_dataframe_kwargs):
     """Display a subset of a DataFrame or Numpy Array to speed up app renders.
@@ -41,8 +42,9 @@ def display_dataframe_quickly(df, max_rows=2000, **st_dataframe_kwargs):
 # def ler_df():
 # 	pass
 
-df = pd.read_csv("texto.csv", sep=",")
-
-
+df = pd.read_csv("texto.csv", sep=",", parse_dates={"teste":[1,2]}, index_col='teste')
 
 display_dataframe_quickly(df)
+
+st.line_chart(df[['T (ºC)']])
+#plt.plot( 'teste', 'T (ºC)', data=df)
