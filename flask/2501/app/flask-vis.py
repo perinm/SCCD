@@ -1,6 +1,7 @@
 import streamlit as st
 #import matplotlib.pyplot as plt
 import pandas as pd
+import numpy as np
 
 #st.write("Authors:")
 #images = ["/root/ryuk.jpg","/root/waru.jpg","/root/peregoso.jpg"]
