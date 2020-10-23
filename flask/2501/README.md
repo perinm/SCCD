@@ -15,7 +15,7 @@ http://45.79.27.184:8502/
 
 Install docker, docker-compose
 
-At the root of folder repository run:
+At the root of this folder run:
 ```
 sudo docker-compose up -d --build
 ```
