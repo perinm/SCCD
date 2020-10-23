@@ -4,8 +4,13 @@ services:
         build: ./Dockerbuild
         image: myflask
         ports:
-            - "5000:5000"
-            - "3000:3000"
-            - "8502:8501"
+          - "5000:5000"
+          - "3000:3000"
+          - "8502:8501"
+#          - "8086:8086"
+#          - "8088:8088"
+        expose:
+          - "8086"
+          - "8088"
         volumes:
-            - ./app:/code
+          - ./app:/code
