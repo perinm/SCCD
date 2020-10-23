@@ -2,8 +2,12 @@ from flask import Flask
 from flask import request
 import os
 from datetime import datetime
+from influxdb import InfluxDBClient
 
 app = Flask(__name__)
+client = InfluxDBClient('localhost', 8086, 'root', 'root', 'example')
+client.create_database('example')
+client.switch_database('pyexample')
 
 @app.route('/')
 def hello():
@@ -34,6 +38,24 @@ def esp(n1,n2=0,n3=0):
     ]
     tabela.write(','.join(lista)+'\n')
     tabela.close()
+
+    client = InfluxDBClient('localhost', 8086, 'root', 'root', 'pyexample')
+    client.create_database('pyexample')
+    client.switch_database('pyexample')
+
+    json_body = [
+    {
+        "measurement": "temp_ryuk",
+        "tags": {
+            "host": "server01",
+            "region": "us-west"
+        },
+        "time": datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
+        "fields": {
+            "value": n1
+        }
+    }]
+    client.write_points(json_body)
     return ""
 
 if __name__ == "__main__":
