@@ -2,6 +2,7 @@ import streamlit as st
 #import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+from influxdb import InfluxDBClient
 
 #st.write("Authors:")
 #images = ["/root/ryuk.jpg","/root/waru.jpg","/root/peregoso.jpg"]
@@ -43,9 +44,23 @@ def display_dataframe_quickly(df, max_rows=2000, **st_dataframe_kwargs):
 # def ler_df():
 # 	pass
 
-df = pd.read_csv("texto.csv", sep=",", parse_dates={"teste":[1,2]}, index_col='teste')
+st.write("Usando pandas+csv")
+
+df = pd.read_csv("texto-v1.csv", sep=",", parse_dates={"teste":[1,2]}, index_col='teste')
 
 display_dataframe_quickly(df)
 
+st.write('Temperatura')
 st.line_chart(df[['T (ºC)']])
+st.write('Estado booleano')
+st.line_chart(df[['estado']])
 #plt.plot( 'teste', 'T (ºC)', data=df)
+
+st.write("InfluxDB")
+client = InfluxDBClient('localhost', 8086, 'root', 'root', 'pyexample')
+st.write(f"Dbs disponiveis: {client.get_list_database()}")
+
+st.write('piexample' in client.get_list_database())
+
+client.switch_database('pyexample')
+st.write(client.query('SELECT * FROM temp_ryuk').raw)

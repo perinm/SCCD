@@ -4,10 +4,10 @@ import os
 from datetime import datetime
 from influxdb import InfluxDBClient
 
-app = Flask(__name__)
-client = InfluxDBClient('localhost', 8086, 'root', 'root', 'example')
-client.create_database('example')
+client = InfluxDBClient('localhost', 8086, 'root', 'root', 'pyexample')
+client.create_database('pyexample')
 client.switch_database('pyexample')
+app = Flask(__name__)
 
 @app.route('/')
 def hello():
@@ -22,26 +22,27 @@ def hora():
 def soma(n1,n2):
     return f'{n1+n2}'
 
-@app.route('/esp/<string:n1>')#_<string:n2>_<string:n3>')
-def esp(n1,n2=0,n3=0):
-    filename="texto.csv"
+@app.route('/esp/<string:n1>_<string:n2>')#_<string:n2>_<string:n3>')
+def esp(n1,n2,n3=0):
+    filename="texto-v1.csv"
     if os.path.exists(filename):
         append_write = 'a' # append if already exists
     else:
         append_write = 'w' # make a new if not
     tabela = open(filename,append_write)
     if append_write == 'w':
-        tabela.write("ip,date,time,T (ºC)\n")#,n2,n3\n")
+        tabela.write("ip,date,time,T (ºC),estado\n")#,n2,n3\n")
     lista=[str(request.remote_addr),
             datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),
-            n1
+            n1,
+            n2
     ]
     tabela.write(','.join(lista)+'\n')
     tabela.close()
 
-    client = InfluxDBClient('localhost', 8086, 'root', 'root', 'pyexample')
-    client.create_database('pyexample')
-    client.switch_database('pyexample')
+    #client = InfluxDBClient('localhost', 8086, 'root', 'root', 'pyexample')
+    #client.create_database('pyexample')
+    #client.switch_database('pyexample')
 
     json_body = [
     {
@@ -50,9 +51,10 @@ def esp(n1,n2=0,n3=0):
             "host": "server01",
             "region": "us-west"
         },
-        "time": datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
+        "time": datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
         "fields": {
-            "value": n1
+            "value": float(n1),
+            "bool": bool(n2)
         }
     }]
     client.write_points(json_body)
