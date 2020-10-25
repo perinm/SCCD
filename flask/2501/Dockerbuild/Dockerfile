@@ -17,6 +17,8 @@ RUN apt-get update \
 	&& apt-get update \
 	&& apt-get install -y grafana
 
+#COPY grafana.ini /etc/grafana/
+
 #RUN service grafana-server start
 
 RUN wget -O ~/ryuk.jpg "https://pm1.narvii.com/6578/c17a4c393bd522f338829d6fff065dbeb26f0614_00.jpg" \

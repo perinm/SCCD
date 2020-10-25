@@ -3,3 +3,4 @@ pandas
 streamlit
 numpy
 influxdb
+dash==1.16.3
