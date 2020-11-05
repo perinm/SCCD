@@ -4,8 +4,9 @@ This project has as scope to allow sensor monitoring and generate data for analy
 
 Currently a flask api is implemented that receives temperature data through a get command in the url:
 
-http://45.79.27.184:5000/esp/temp_value (replace <temp_value> with the temp variable)
+http://45.79.27.184:5000/esp/<tempValue>_<bool1>_<bool2>_<bool3> (replace "<tempValue>" with the temp variable and "<booln>" with 0 or 1)
 
+This received data is stored in an InfluxDB database and visualized in a grafana live dashboard.
 
 Live preview of the data at:
 
