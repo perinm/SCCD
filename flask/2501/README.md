@@ -9,7 +9,7 @@ http://45.79.27.184:5000/esp/temp_value (replace <temp_value> with the temp vari
 
 Live preview of the data at:
 
-http://45.79.27.184:8502/
+http://45.79.27.184:3000/d/Oo9ql8tGk/henrique?orgId=1&refresh=5s&from=1604606280542&to=1604609880542
 
 # Install
 
