@@ -1,0 +1,3 @@
+spark-3.0.1-bin-hadoop3.2/sbin/start-slave.sh localhost:8080
+
+/bin/bash

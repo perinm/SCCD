@@ -1,6 +1,6 @@
 FROM openjdk:16-slim-buster
 
-COPY entrypoint /
+#COPY entrypoint /
 
 WORKDIR /root
 
@@ -11,4 +11,4 @@ RUN apt update \
     && tar xzf spark-3.0.1-bin-hadoop3.2.tgz \
     && rm spark-3.0.1-bin-hadoop3.2.tgz
 
-ENTRYPOINT /entrypoint
+#ENTRYPOINT /entrypoint
